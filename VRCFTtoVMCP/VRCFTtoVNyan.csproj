@@ -1,14 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
     <ApplicationIcon>logo_VRCFTtoVMCP.ico</ApplicationIcon>
     <Version>0.3.0</Version>
     <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+    <StartupObject>VRCFTtoVMCP.VRCFTtoVNyan</StartupObject>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="MainWindow.xaml.cs" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Remove="Resources\avtr_00000000-0000-0000-0000-000000000000.json" />
@@ -19,19 +24,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Page Remove="MainWindow.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="logo_VRCFTtoVMCP.ico" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Resources\avtr_00000000-0000-0000-0000-000000000000.json" />
     <EmbeddedResource Include="Resources\avtr_00000000-0000-0000-0000-000000000001.json" />
-    <PackageReference Include="Makaretu.Dns.Multicast.New" Version="0.31.0" />
     <PackageReference Include="MaterialDesignThemes" Version="4.9.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Zeroconf" Version="3.6.11" />
-    <Resource Include="Resources\logo_ThisApp.png" />
-    <Resource Include="Resources\logo_VirtualMotionCapture.png" />
-    <Resource Include="Resources\logo_VRCFaceTracking.png" />
   </ItemGroup>
 
   <ItemGroup>

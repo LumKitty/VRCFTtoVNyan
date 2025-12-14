@@ -76,6 +76,9 @@ namespace VRCFTtoVMCP
             bundle.Add(new Message("/VMC/Ext/Blend/Val", "EyeSquintRight", _weights[VRCFTParametersV2.EyeSquintRight]));
             bundle.Add(new Message("/VMC/Ext/Blend/Val", "EyeWideLeft", EyeWide(_weights[VRCFTParametersV2.EyeLidLeft])));
             bundle.Add(new Message("/VMC/Ext/Blend/Val", "EyeWideRight", EyeWide(_weights[VRCFTParametersV2.EyeLidRight])));
+            
+            
+            
             bundle.Add(new Message("/VMC/Ext/Blend/Val", "JawForward", MoveForward(_weights[VRCFTParametersV2.JawZ])));
             bundle.Add(new Message("/VMC/Ext/Blend/Val", "JawLeft", MoveLeft(_weights[VRCFTParametersV2.JawX])));
             bundle.Add(new Message("/VMC/Ext/Blend/Val", "JawOpen", _weights[VRCFTParametersV2.JawOpen]));

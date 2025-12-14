@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common.Logging.Configuration;
+using System;
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
@@ -44,6 +45,7 @@ namespace VRCFTtoVMCP.Osc
         {
             try
             {
+                VRCFTtoVNyan.Log(data);
                 udpClient_.Send(data, size, endPoint_);
             }
             catch (System.Exception)

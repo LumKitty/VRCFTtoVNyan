@@ -1,6 +1,6 @@
 ﻿{
   "id": "avtr_00000000-0000-0000-0000-000000000001",
-  "name": "[VRCFTtoVMCP] \"Send ON\" for PerfectSync related parameter.",
+  "name": "[VRCFTtoVNyan] Tracking is ON",
   "parameters": [
     {
       "name": "v2/EyeLeftX",

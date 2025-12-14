@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common.Logging.Configuration;
+using System;
 using System.IO;
 using System.Reflection;
 using System.Text;
@@ -13,6 +14,7 @@ namespace VRCFTtoVMCP
         public static void CreateVRCAvatarFile(string filename)
         {
             string jsonText = ResourceString(filename);
+            VRCFTtoVNyan.Log("JSON: " + jsonText);
             string vrcAvatarsFolder = VRCAvatarsFolder();
             if (jsonText.Length > 0 && vrcAvatarsFolder.Length > 0)
             {
@@ -36,7 +38,7 @@ namespace VRCFTtoVMCP
 
         public static string ResourceString(string filename)
         {
-            string resource = $"VRCFTtoVMCP.Resources.{filename}";
+            string resource = $"VRCFTtoVNyan.Resources.{filename}";
             Assembly assembly = Assembly.GetExecutingAssembly();
             using (Stream? stream = assembly.GetManifestResourceStream(resource))
             {
